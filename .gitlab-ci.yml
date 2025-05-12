@@ -1,0 +1,12 @@
+stages:
+- build
+
+include:
+  - project: Devices/JobTemplate
+    file: includes/Build-Docker-Image.yml
+    ref: main
+
+docker-build:
+  stage: build
+  extends:
+  - .build-docker
